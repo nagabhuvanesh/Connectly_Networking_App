@@ -1,1 +1,18 @@
 android-sdk/
+
+# Build outputs
+**/build/
+.gradle/
+
+# IDE
+.idea/
+*.iml
+local.properties
+
+# Temporary UI dumps / emulator logs (root)
+/ui*.xml
+/window_dump.xml
+/emulator*.log
+/emulator*.err.log
+/emulator_pid.txt
+/full_logcat.txt

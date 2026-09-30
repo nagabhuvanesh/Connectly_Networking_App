@@ -14,4 +14,4 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Connectly"
-include(":app")
+include(":composeApp")
