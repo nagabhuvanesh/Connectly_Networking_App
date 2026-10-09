@@ -1,0 +1,40 @@
+kotlin version: 2.4.20
+error message: org.jetbrains.kotlin.backend.common.CompilationException: Back-end: Please report this problem https://kotl.in/issue
+/mnt/agent/work/22b92203f00747e0/out/androidx/compose/material/material-icons-extended/build/generatedIcons/release/src/commonMain/kotlin/androidx/compose/material/icons/rounded/DragIndicator.kt:-1:-1
+Details: Internal error in file lowering: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayList.toArray(ArrayList.java:370)
+	at java.base/java.util.ArrayList.<init>(ArrayList.java:182)
+	at org.jetbrains.kotlin.backend.common.LowerKt.runOnFilePostfix(Lower.kt:142)
+	at org.jetbrains.kotlin.backend.common.lower.KotlinNothingValueExceptionLowering.lower(KotlinNothingValueExceptionLowering.kt:29)
+	at org.jetbrains.kotlin.backend.common.FileLoweringPass.lower(Lower.kt:42)
+	at org.jetbrains.kotlin.backend.common.phaser.ModuleLoweringPhase.phaseBody(PhaseFactories.kt:67)
+	at org.jetbrains.kotlin.backend.common.phaser.ModuleLoweringPhase.phaseBody(PhaseFactories.kt:62)
+	at org.jetbrains.kotlin.config.phaser.NamedCompilerPhase.invoke(CompilerPhase.kt:102)
+	at org.jetbrains.kotlin.backend.wasm.WasmCompilerKt.lowerPreservingTags(wasmCompiler.kt:175)
+	at org.jetbrains.kotlin.backend.wasm.WasmCompilerKt.compileToLoweredIr(wasmCompiler.kt:139)
+	at org.jetbrains.kotlin.cli.pipeline.web.wasm.WholeWorldCompilerBase.lowerIr(KotlinIr2WasmIrCompiler.kt:59)
+	at org.jetbrains.kotlin.cli.pipeline.web.wasm.WasmBackendPipelinePhase.compileNonIncrementally(WasmBackendPipelinePhase.kt:81)
+	at org.jetbrains.kotlin.cli.pipeline.web.wasm.WasmBackendPipelinePhase.compileNonIncrementally(WasmBackendPipelinePhase.kt:27)
+	at org.jetbrains.kotlin.cli.pipeline.web.WebBackendPipelinePhase.executePhase(WebBackendPipelinePhase.kt:54)
+	at org.jetbrains.kotlin.cli.pipeline.web.WebBackendPipelinePhase.executePhase(WebBackendPipelinePhase.kt:29)
+	at org.jetbrains.kotlin.cli.pipeline.PipelinePhase.phaseBody(PipelinePhase.kt:60)
+	at org.jetbrains.kotlin.cli.pipeline.PipelinePhase.phaseBody(PipelinePhase.kt:50)
+	at org.jetbrains.kotlin.config.phaser.NamedCompilerPhase.invoke(CompilerPhase.kt:102)
+	at org.jetbrains.kotlin.backend.common.phaser.CompositePhase.invoke(PhaseBuilders.kt:22)
+	at org.jetbrains.kotlin.config.phaser.CompilerPhaseKt.invokeToplevel(CompilerPhase.kt:53)
+	at org.jetbrains.kotlin.cli.pipeline.AbstractCliPipeline.runPhasedPipeline(AbstractCliPipeline.kt:134)
+	at org.jetbrains.kotlin.cli.pipeline.AbstractCliPipeline.executeAndReturnPipeLineArtifact(AbstractCliPipeline.kt:88)
+	at org.jetbrains.kotlin.cli.pipeline.AbstractCliPipeline.executeAndReturnPipeLineArtifact$default(AbstractCliPipeline.kt:48)
+	at org.jetbrains.kotlin.cli.pipeline.AbstractCliPipeline.execute(AbstractCliPipeline.kt:39)
+	at org.jetbrains.kotlin.cli.js.KotlinWasmCompiler.doExecutePhased(KotlinWasmCompiler.kt:30)
+	at org.jetbrains.kotlin.cli.js.KotlinWasmCompiler.doExecutePhased(KotlinWasmCompiler.kt:16)
+	at org.jetbrains.kotlin.cli.common.CLICompiler.exec(CLICompiler.kt:146)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:1949)
+	at org.jetbrains.kotlin.daemon.CompileServiceImpl.compile(CompileServiceImpl.kt:935)
+	at java.base/java.lang.invoke.LambdaForm$DMH/0x0000022d400a5000.invokeInterface(LambdaForm$DMH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x0000022d400a9000.invoke(LambdaForm$MH)
+Caused by: java.lang.OutOfMemoryError: GC overhead limit exceeded
+	... 32 more
+
+
